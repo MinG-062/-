@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>자기소개서 글자수 계산기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h2>자기소개서 글자수 계산기</h2>
+
+    <textarea id="textInput" placeholder="자기소개서를 입력하세요."></textarea>
+
+    <div class="limit-box">
+      <label for="limitInput">목표 글자 수</label>
+      <select id="limitInput">
+        <option value="500">500자</option>
+        <option value="700">700자</option>
+        <option value="800" selected>800자</option>
+        <option value="1000">1000자</option>
+        <option value="1500">1500자</option>
+      </select>
+    </div>
+
+    <section class="result">
+      <div>
+        <span>공백 포함</span>
+        <strong id="withSpace">0자</strong>
+      </div>
+      <div>
+        <span>공백 제외</span>
+        <strong id="withoutSpace">0자</strong>
+      </div>
+      <div>
+        <span>UTF-8 바이트</span>
+        <strong id="byteCount">0 Byte</strong>
+      </div>
+    </section>
+
+    <div class="progress-area">
+      <div class="progress-info">
+        <span id="progressText">0 / 800자</span>
+        <span id="remainText">800자 남음</span>
+      </div>
+      <div class="progress-bar">
+        <div id="progressFill"></div>
+      </div>
+    </div>
+
+    <p id="warningText"></p>
+
+    <button id="clearBtn">초기화</button>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
