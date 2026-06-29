@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, "Noto Sans KR", sans-serif;
+  background: #f7f7f7;
+  color: #222;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+textarea {
+  width: 100%;
+  min-height: 230px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  resize: vertical;
+  font-size: 15px;
+  line-height: 1.6;
+  background: #fff;
+  color: #222;
+}
+
+.limit-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 14px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+}
+
+.limit-box label {
+  font-size: 14px;
+  color: #555;
+}
+
+select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9px;
+  margin-top: 12px;
+}
+
+.result div {
+  background: white;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 13px 8px;
+  text-align: center;
+}
+
+.result span {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.result strong {
+  font-size: 19px;
+}
+
+.progress-area {
+  margin-top: 14px;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  margin-bottom: 7px;
+  color: #555;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background: #e5e5e5;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: #222;
+  transition: width 0.2s ease;
+}
+
+#warningText {
+  min-height: 20px;
+  margin: 10px 0 0;
+  font-size: 13px;
+  color: #d93025;
+  font-weight: 600;
+}
+
+button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  background: #222;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #444;
+}
+
+@media (max-width: 520px) {
+  .result {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #191919;
+    color: #f1f1f1;
+  }
+
+  textarea,
+  .limit-box,
+  .result div,
+  select {
+    background: #252525;
+    color: #f1f1f1;
+    border-color: #444;
+  }
+
+  .result span,
+  .limit-box label,
+  .progress-info {
+    color: #bbb;
+  }
+
+  .progress-bar {
+    background: #444;
+  }
+
+  #progressFill {
+    background: #f1f1f1;
+  }
+
+  button {
+    background: #f1f1f1;
+    color: #191919;
+  }
+}
